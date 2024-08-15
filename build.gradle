@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.lifedrained'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    // https://mvnrepository.com/artifact/org.apache.derby/derby
+    implementation 'org.apache.derby:derby:10.16.1.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
